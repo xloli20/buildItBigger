@@ -1,21 +1,26 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+import com.example.androidjokedisplaylib.JokesDisplayActivity;
+import com.example.javajokeslib.Jokes;
 
 
 public class MainActivity extends AppCompatActivity {
+    public final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -40,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        Toast.makeText(this, "a joke retrieved from your Java joke telling library."
-                , Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, JokesDisplayActivity.class);
+        Jokes jokes = new Jokes();
+        intent.putExtra("joke", jokes.getJoke());
+        startActivity(intent);
     }
-
-
 }
