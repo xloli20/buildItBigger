@@ -1,27 +1,21 @@
-Oct 30, 2019 7:35:53 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Nov 01, 2019 9:30:22 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\Alaa\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'D:\ADND\buildItBigger\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2019-10-30 19:35:53.691:INFO::main: Logging initialized @455ms to org.eclipse.jetty.util.log.StdErrLog
-2019-10-30 19:35:53.731:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
-Oct 30, 2019 4:35:53 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+2019-11-01 21:30:22.475:INFO::main: Logging initialized @505ms to org.eclipse.jetty.util.log.StdErrLog
+2019-11-01 21:30:22.522:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+Nov 01, 2019 6:30:22 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (D:\ADND\buildItBigger\backend) is not equal to your 
 web application root (D:\ADND\buildItBigger\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2019-10-30 19:35:53.994:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_202-release-1483-b03
-2019-10-30 19:35:54.805:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@247310d0{/,file:///D:/ADND/buildItBigger/backend/build/exploded-backend/,AVAILABLE}{D:\ADND\buildItBigger\backend\build\exploded-backend}
-2019-10-30 19:35:54.805:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
-2019-10-30 19:35:54.805:INFO:oejs.session:main: node0 Scavenging disabled
-2019-10-30 19:35:54.821:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4fe3c938{HTTP/1.1,[http/1.1]}{localhost:8080}
-2019-10-30 19:35:54.821:INFO:oejs.Server:main: Started @1586ms
-Oct 30, 2019 4:35:54 PM com.google.appengine.tools.development.AbstractModule startup
+2019-11-01 21:30:22.887:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_202-release-1483-b03
+2019-11-01 21:30:23.729:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@76494737{/,file:///D:/ADND/buildItBigger/backend/build/exploded-backend/,AVAILABLE}{D:\ADND\buildItBigger\backend\build\exploded-backend}
+2019-11-01 21:30:23.729:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2019-11-01 21:30:23.729:INFO:oejs.session:main: node0 Scavenging disabled
+2019-11-01 21:30:23.746:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4fe3c938{HTTP/1.1,[http/1.1]}{localhost:8080}
+2019-11-01 21:30:23.746:INFO:oejs.Server:main: Started @1776ms
+Nov 01, 2019 6:30:23 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-Oct 30, 2019 4:35:54 PM com.google.appengine.tools.development.AbstractModule startup
+Nov 01, 2019 6:30:23 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-Oct 30, 2019 7:35:54 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+Nov 01, 2019 9:30:23 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-Oct 30, 2019 7:36:19 PM com.google.appengine.api.datastore.dev.LocalDatastoreService init
-INFO: Local Datastore initialized: 
-	Type: High Replication
-	Storage: D:\ADND\buildItBigger\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin
-Oct 30, 2019 7:36:19 PM com.google.appengine.api.datastore.dev.LocalDatastoreService load
-INFO: The backing store, D:\ADND\buildItBigger\backend\build\exploded-backend\WEB-INF\appengine-generated\local_db.bin, does not exist. It will be created.
