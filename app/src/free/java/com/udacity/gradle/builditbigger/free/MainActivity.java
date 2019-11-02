@@ -15,6 +15,8 @@ import com.example.javajokeslib.Jokes;
 import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import com.udacity.gradle.builditbigger.R;
 
+import java.util.concurrent.ExecutionException;
+
 
 public class MainActivity extends AppCompatActivity {
     public final String TAG = MainActivity.class.getSimpleName();
@@ -47,8 +49,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
+    public void tellJoke(View view) throws ExecutionException, InterruptedException {
         //noinspection unchecked
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
-    }
+        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
+        endpointsAsyncTask.execute(new Pair<Context, String>(this, "Manfred"));
+        String result = endpointsAsyncTask.get();
+        Intent intent = new Intent(this, JokesDisplayActivity.class);
+        intent.putExtra("joke", result);
+        startActivity(intent);    }
 }
