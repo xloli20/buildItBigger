@@ -1,26 +1,21 @@
-Nov 02, 2019 8:13:30 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Nov 03, 2019 5:43:55 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\Alaa\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'D:\ADND\buildItBigger\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2019-11-02 20:13:30.954:INFO::main: Logging initialized @491ms to org.eclipse.jetty.util.log.StdErrLog
-2019-11-02 20:13:30.992:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
-Nov 02, 2019 5:13:31 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+2019-11-03 17:43:55.196:INFO::main: Logging initialized @570ms to org.eclipse.jetty.util.log.StdErrLog
+2019-11-03 17:43:55.241:WARN:oejs.AbstractConnector:main: Ignoring deprecated socket close linger time
+Nov 03, 2019 2:43:55 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (D:\ADND\buildItBigger\backend) is not equal to your 
 web application root (D:\ADND\buildItBigger\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2019-11-02 20:13:31.274:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_202-release-1483-b03
-2019-11-02 20:13:32.109:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@76494737{/,file:///D:/ADND/buildItBigger/backend/build/exploded-backend/,AVAILABLE}{D:\ADND\buildItBigger\backend\build\exploded-backend}
-2019-11-02 20:13:32.109:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
-2019-11-02 20:13:32.109:INFO:oejs.session:main: node0 Scavenging disabled
-2019-11-02 20:13:32.127:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4fe3c938{HTTP/1.1,[http/1.1]}{localhost:8080}
-2019-11-02 20:13:32.127:INFO:oejs.Server:main: Started @1664ms
-Nov 02, 2019 5:13:32 PM com.google.appengine.tools.development.AbstractModule startup
+2019-11-03 17:43:55.542:INFO:oejs.Server:main: jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_202-release-1483-b03
+2019-11-03 17:43:56.382:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@76494737{/,file:///D:/ADND/buildItBigger/backend/build/exploded-backend/,AVAILABLE}{D:\ADND\buildItBigger\backend\build\exploded-backend}
+2019-11-03 17:43:56.382:INFO:oejs.session:main: DefaultSessionIdManager workerName=node0
+2019-11-03 17:43:56.382:INFO:oejs.session:main: node0 Scavenging disabled
+2019-11-03 17:43:56.398:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@4fe3c938{HTTP/1.1,[http/1.1]}{localhost:8080}
+2019-11-03 17:43:56.398:INFO:oejs.Server:main: Started @1773ms
+Nov 03, 2019 2:43:56 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8080/
-Nov 02, 2019 5:13:32 PM com.google.appengine.tools.development.AbstractModule startup
+Nov 03, 2019 2:43:56 PM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8080/_ah/admin
-Nov 02, 2019 8:13:32 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+Nov 03, 2019 5:43:56 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-2019-11-02 20:13:42.372:INFO:oejs.AbstractConnector:pool-1-thread-1: Stopped NetworkTrafficSelectChannelConnector@4fe3c938{HTTP/1.1,[http/1.1]}{localhost:8080}
-2019-11-02 20:13:42.376:INFO:oejsh.ContextHandler:pool-1-thread-1: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@76494737{/,file:///D:/ADND/buildItBigger/backend/build/exploded-backend/,UNAVAILABLE}{D:\ADND\buildItBigger\backend\build\exploded-backend}
-Nov 02, 2019 8:13:42 PM com.google.appengine.tools.development.AbstractModule shutdown
-INFO: Shutting down module instance default
-Shutting down.

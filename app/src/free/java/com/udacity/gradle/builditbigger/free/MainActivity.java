@@ -1,12 +1,12 @@
 package com.udacity.gradle.builditbigger.free;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.androidjokedisplaylib.JokesDisplayActivity;
 import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import com.udacity.gradle.builditbigger.R;
 
@@ -45,7 +45,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        //noinspection unchecked
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask(getApplicationContext(),
+                new EndpointsAsyncTask.OnEventListener() {
+                    @Override
+                    public void onSuccess(String object) {
+                        Intent intent = new Intent(getApplicationContext(), JokesDisplayActivity.class);
+                        intent.putExtra("joke", object);
+                        startActivity(intent);
+                    }
+
+                    @Override
+                    public void onFailure(Exception e) {
+
+                    }
+                });
+        endpointsAsyncTask.execute();
     }
 }

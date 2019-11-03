@@ -1,12 +1,10 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.util.Pair;
 
-import com.example.androidjokedisplaylib.JokesDisplayActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -20,6 +18,16 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
     private final String TAG = EndpointsAsyncTask.class.getSimpleName();
     private MyApi myApiService = null;
     private Context context;
+    private OnEventListener<String> mCallBack;
+    public Exception mException;
+
+    public  EndpointsAsyncTask(){
+    }
+
+    public EndpointsAsyncTask(Context context,OnEventListener callback) {
+        mCallBack = callback;
+        this.context = context;
+    }
 
     @Override
     protected String doInBackground(Pair<Context, String>... params) {
@@ -41,7 +49,7 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
             myApiService = builder.build();
         }
 
-        context = params[0].first;
+//        context = params[0].first;
 
         try {
             return myApiService.sayJoke().execute().getData();
@@ -51,11 +59,27 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
         }
     }
 
+    public interface OnEventListener<T> {
+        public void onSuccess(String object);
+        public void onFailure(Exception e);
+    }
+
+
+
     @Override
     protected void onPostExecute(String result) {
+        if (mCallBack != null) {
+            if (mException == null) {
+                mCallBack.onSuccess(result);
+            } else {
+                mCallBack.onFailure(mException);
+            }
+        }
+
         Log.d(TAG, "onPostExecute: result: "+result);
-        Intent intent = new Intent(context, JokesDisplayActivity.class);
-        intent.putExtra("joke",result);
-        context.startActivity(intent);
+//        Intent intent = new Intent(context, JokesDisplayActivity.class);
+//        intent.putExtra("joke",result);
+//        context.startActivity(intent);
     }
 }
+
