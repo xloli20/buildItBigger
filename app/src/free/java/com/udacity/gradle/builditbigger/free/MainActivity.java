@@ -1,21 +1,16 @@
 package com.udacity.gradle.builditbigger.free;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.androidjokedisplaylib.JokesDisplayActivity;
-import com.example.javajokeslib.Jokes;
 import com.udacity.gradle.builditbigger.EndpointsAsyncTask;
 import com.udacity.gradle.builditbigger.R;
 
-import java.util.concurrent.ExecutionException;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -49,12 +44,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) throws ExecutionException, InterruptedException {
+    public void tellJoke(View view) {
         //noinspection unchecked
-        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
-        endpointsAsyncTask.execute(new Pair<Context, String>(this, "Manfred"));
-        String result = endpointsAsyncTask.get();
-        Intent intent = new Intent(this, JokesDisplayActivity.class);
-        intent.putExtra("joke", result);
-        startActivity(intent);    }
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
+    }
 }

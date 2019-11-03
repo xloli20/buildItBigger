@@ -26,10 +26,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
         endpointsAsyncTask.execute(new Pair<Context, String>(this, "Manfred"));
-        String result = endpointsAsyncTask.get();
-        Intent intent = new Intent(this, JokesDisplayActivity.class);
-        intent.putExtra("joke", result);
-        startActivity(intent);    }
+    }
 }
