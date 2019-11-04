@@ -1,10 +1,10 @@
 package com.example.androidjokedisplaylib;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class JokesDisplayActivity extends AppCompatActivity {
 
@@ -15,8 +15,9 @@ public class JokesDisplayActivity extends AppCompatActivity {
 
         TextView jokeTextView = findViewById(R.id.joke_text_view);
         Intent intent = getIntent();
-        intent.getStringExtra("joke");
-        jokeTextView.setText(intent.getStringExtra("joke"));
-
+        if (intent.hasExtra("joke")) {
+            intent.getStringExtra("joke");
+            jokeTextView.setText(intent.getStringExtra("joke"));
+        }
     }
 }
